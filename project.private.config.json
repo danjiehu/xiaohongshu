@@ -19,9 +19,11 @@
           "scene": null
         },
         {
+          "name": "Show",
+          "pathName": "pages/show/show",
+=======
           "name": "post",
           "pathName": "pages/post/post",
-          "scene": null
         }
       ]
     }

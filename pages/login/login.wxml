@@ -1,2 +1,9 @@
 <!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view class="main-container">
+  <view class="title">Welcome to</view>
+  <view class="red-highlight">小红书</view>
+  <view class="subtitle">a shopping sharing community</view>
+</view>
+<view class="container-btn">
+  <view class="btn-red">enter</view>
+</view>

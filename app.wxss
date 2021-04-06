@@ -1,4 +1,4 @@
-/**app.wxss**/
+/* *app.wxss*
 .container {
   height: 100%;
   display: flex;
@@ -7,7 +7,11 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
+<<<<<<< HEAD
 } 
 button{
   margin: 0 !important;
 }
+=======
+}  */
+>>>>>>> eeb11f52d415da85485c735eba411f4eab8c1cab

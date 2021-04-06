@@ -1,1 +1,153 @@
 /* pages/show/show.wxss */
+page {
+  font-family: "Montserrat";
+  background-color: #333;
+}
+
+.post-card {
+  width: 100%;
+  /* height: 60vh; */
+  border-radius: 72rpx 0 0 72rpx;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.image {
+  height: 40vh;
+  width: 100%;
+  background-color: #f1f1f0;
+  border-radius: 72rpx 72rpx 0 0;
+}
+
+.details-area {
+  border-radius: 0 0 72rpx 72rpx;
+  padding: 40rpx;
+  background-color: white;
+}
+
+.meta-flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  background-color: #f1f1f0;
+  margin-right: 20rpx;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 9pt;
+}
+
+.likes-details {
+  display: flex;
+  align-items: center;
+}
+
+.likes-count {
+  padding-right: 20rpx;
+}
+
+.post-title {
+  font-size: 20pt;
+  font-weight: 500;
+  text-align: center;
+}
+
+.post-desc {
+  font-size: 11pt;
+  font-weight: 400;
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.button-area {
+  display: flex;
+  margin: 0 auto;
+  width: 50%;
+  padding: 40rpx 0 0 0;
+}
+
+.center-buttons {
+  margin: 0 auto;
+}
+
+.button {
+  padding: 26rpx 50rpx;
+  border-radius: 50rpx;
+  font-size: 10pt;
+  font-weight: 600;
+  margin: 6rpx;
+}
+
+.black {
+  background-color: #f1f1f0;
+  color: #333;
+}
+
+.red {
+  color: white;
+  background-color: #FF6538;
+}
+
+.post-comments {
+  position: relative;
+  left: 5%;
+  top: -80rpx;
+}
+
+.feedback-card {
+  width: 100vw;
+  box-sizing: border-box;
+  height: 20vh;
+  border-radius: 80rpx;
+  padding: 40rpx;
+  background-color: white;
+}
+
+.sub-title {
+  font-size: 16pt;
+  font-weight: 500;
+  text-align: center;
+}
+
+.comment-flexbox {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.user-avatar-small {
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  background-color: #f1f1f0;
+  margin-right: 20rpx;
+}
+
+.user-name-small {
+  font-weight: 600;
+  font-size: 9pt;
+}
+
+.user-comment {
+  font-weight: 400;
+  font-size: 9pt;
+  padding: 0 20rpx;
+}
+
+.user-time {
+  font-weight: 400;
+  font-size: 9pt;
+  color: #ADADAD;
+}
