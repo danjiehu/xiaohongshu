@@ -1,1 +1,51 @@
 /* pages/login/login.wxss */
+page{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main-container {
+  background-color: #f1f1f0;
+  padding: 190rpx 80rpx;
+}
+
+.title{
+  padding-top: 200rpx;
+  font-size: x-large;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 10rpx;
+}
+
+.red-highlight{
+  padding: 16rpx 22rpx;
+  width: 180rpx;
+  border-radius: 8rpx;
+  font-size: xx-large;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 10rpx;
+  margin-bottom: 26rpx;
+  background-color: #FF6538;
+}
+
+.subtitle {
+  font-size: medium;
+  font-weight: 400;
+}
+
+.container-btn{
+  border-radius: 100rpx;
+  margin-top: -70rpx;
+  background-color: #fff;
+  /* height: 50vh; */
+  padding: 100rpx 80rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-red{
+  background-color: #FF6538;
+  padding: 50rpx 80rpx;
+  border-radius: 100rpx;
+  color: #fff;
+  width: 90rpx;
+}
