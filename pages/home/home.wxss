@@ -1,1 +1,78 @@
-/* pages/home/home.wxss */
+/* pages/xhsh/xhsh.wxss */
+page{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.top-menu {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 90rpx;
+}
+
+.button {
+  padding: 26rpx 50rpx;
+  border-radius: 50rpx;
+  font-size: 10pt;
+  font-weight: 600;
+}
+
+.black {
+  background-color: #333;
+  color: white;
+}
+
+.white {
+  color: #333;
+}
+
+.cards-masonry{
+  padding: 40rpx 20rpx;
+  column-count: 2;
+  column-gap: 16rpx;
+}
+
+.card{
+  box-sizing: content-box;
+}
+
+.img-full{
+  height: 400rpx;
+  background-color: #f1f1f0;
+  border-radius: 32rpx;
+}
+
+.user-likes{
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  padding-top: 8rpx;
+}
+
+.heart-icon{
+  height: 46rpx;
+  width: 46rpx;
+}
+
+.likes-text{
+  font-size: small;
+  font-weight: 400;
+  padding-left: 10rpx;
+}
+
+.text-description {
+  margin-left: 20rpx;
+}
+
+.username {
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.round-img {
+  height: 56rpx;
+  width: 56rpx;
+  background-color: #E4E4E4;
+  border-radius: 50rpx;
+}

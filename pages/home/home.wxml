@@ -1,2 +1,32 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="top-menu">
+  <view class="button black">For you</view>
+  <view class="button white">Following</view>
+</view>
+
+<view class="cards-masonry">
+  <view class="card">
+    <image class="img-full"></image>
+    <view class="user-likes">
+      <image class="heart-icon" src="/images/like.png"></image>
+      <view class="likes-text">10k</view>
+    </view>
+    <view class="text-description">Lorem ipsum</view>
+    <view class="username">
+      <image class="round-img"></image>
+      <view class="likes-text">Name username</view>
+    </view>
+  </view>
+  <view class="card">
+    <image class="img-full" src="/images/image1.png"></image>
+    <view class="user-likes">
+      <image class="heart-icon" src="/images/like.png"></image>
+      <view class="likes-text">10k</view>
+    </view>
+    <view class="text-description">Lorem ipsum</view>
+    <view class="username">
+      <image class="round-img"></image>
+      <view class="likes-text">Name username</view>
+    </view>
+  </view>
+</view>
