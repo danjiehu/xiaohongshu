@@ -32,13 +32,14 @@ page{
 }
 
 .card{
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 .img-full{
-  height: 400rpx;
+  /* height: 400rpx; */
   background-color: #f1f1f0;
   border-radius: 32rpx;
+  width: 100%;
 }
 
 .user-likes{
