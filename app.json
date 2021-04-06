@@ -1,8 +1,28 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/login/login",
+    "pages/home/home",
+    "pages/show/show",
+    "pages/post/post",
+    "pages/user/user"
   ],
+
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "HOME"
+      },
+      {"pagePath": "pages/post/post",
+        "text": "POST"
+        },
+      {"pagePath": "pages/user/user",
+      "text": "USER"
+      }
+    ]
+  },
+
+
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
@@ -17,4 +37,5 @@
       "provider": "wxc6b86e382a1e3294"
     }
   }
+  
 }
