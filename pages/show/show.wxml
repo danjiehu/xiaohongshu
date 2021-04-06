@@ -1,2 +1,36 @@
 <!--pages/show/show.wxml-->
-<text>pages/show/show.wxml</text>
+<view class="post-card">
+  <view class="image"></view>
+  <view class="details-area">
+    <view class="meta-flex-box">
+      <view class="user-details">
+        <view class="user-avatar"></view>
+        <view class="user-name">Username</view>
+      </view>
+      <view class="likes-details">
+        <view class="likes-count">10k</view>
+        <view>❤️</view>
+      </view>
+    </view>
+    <view>
+      <view class="post-title">I'm a title</view>
+      <view class="post-desc">Lorem ipsum lorem ipsum</view>
+    </view>
+    <view class="center-buttons">
+      <view class="button-area">
+        <view class="button black">Visit</view>
+        <view class="button red">Save</view>
+      </view>
+      <view class="post-comments">💬</view>
+    </view>
+  </view>
+</view>
+<view class="feedback-card">
+  <view class="sub-title">Share your feedback</view>
+  <view class="comment-flexbox">
+    <view class="user-avatar-small"></view>
+    <view class="user-name-small">Username</view>
+    <view class="user-comment">hey this is my comment</view>
+    <view class="user-time">02:08</view>
+  </view>
+</view>
