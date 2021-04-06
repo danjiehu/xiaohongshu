@@ -1,2 +1,29 @@
-<!--pages/post/post.wxml-->
-<text>pages/post/post.wxml</text>
+
+<view class="container_post">
+  <view>create post</view>
+  
+  <!-- start if user is NOT logged in -->
+  <!-- end if user is NOT logged in -->
+
+  <!-- start if user is logged-in -->
+  <form bindsubmit="submitPost">
+
+    <!-- start of select image -->
+    <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="uploadImage"></image>
+    <!-- end of select image -->
+
+    <!-- start of edit post title and description -->
+    <view class="selection_title">title</view>
+    <input type="text" placeholder="input title here" />
+    <view class="selection_title">description</view>
+    <input type="text" placeholder="give your post a nice description" />
+    <!-- end of edit post title and description -->
+
+    <!-- start of submit button  -->
+    <!-- <button form-type="submit">test</button> -->
+    <view form-type="submit" class="button" hover-class="button_hover">submit</view>
+    <!-- start of submit button  -->
+ 
+  </form>
+  <!-- start if user is logged-in -->
+</view>
