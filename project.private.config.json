@@ -21,7 +21,9 @@
         {
           "name": "Show",
           "pathName": "pages/show/show",
-          "scene": null
+=======
+          "name": "post",
+          "pathName": "pages/post/post",
         }
       ]
     }
