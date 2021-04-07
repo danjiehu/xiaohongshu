@@ -1,20 +1,20 @@
 <!--pages/show/show.wxml-->
 <view class="post-card">
-  <view class="image"></view>
+  <image mode="widthFix" class="img-full" src="{{post.img_1.path}}"></image>
   <view class="details-area">
     <view class="meta-flex-box">
       <view class="user-details">
         <view class="user-avatar"></view>
-        <view class="user-name">Username</view>
+        <view class="user-name">{{currentUser.avatar}}</view>
       </view>
       <view class="likes-details">
         <view class="likes-count">10k</view>
-        <view>❤️</view>
+        <image class="heart-icon" src="/images/like.png"></image>
       </view>
     </view>
     <view>
-      <view class="post-title">I'm a title</view>
-      <view class="post-desc">Lorem ipsum lorem ipsum</view>
+      <view class="post-title">{{post.title}}</view>
+      <view class="post-desc">{{post.description}}</view>
     </view>
     <view class="center-buttons">
       <view class="button-area">
@@ -27,10 +27,10 @@
 </view>
 <view class="feedback-card">
   <view class="sub-title">Share your feedback</view>
-  <view class="comment-flexbox">
+  <view class="comment-flexbox" wx:for="{{comments}}" wx:key="key" wx:for-item="comment">
     <view class="user-avatar-small"></view>
-    <view class="user-name-small">Username</view>
-    <view class="user-comment">hey this is my comment</view>
+    <view class="user-name-small">{{currentUser.avatar}}</view>
+    <view class="user-comment">{{comment.content}}</view>
     <view class="user-time">02:08</view>
   </view>
 </view>
