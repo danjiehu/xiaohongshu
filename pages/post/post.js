@@ -13,11 +13,54 @@ Page({
    
   },
 
+  // start of submitPost function
   submitPost: function(e) {
-    console.log("submitPost",e)
-  },
 
-  // start of uploadImage function
+    console.log("submitPost",e)
+    let page = this
+    let images = page.data.images
+    // let file = new wx.BaaS.File()
+      // let fileParams = {filePath: page.data.images}
+      // let metaData = {categoryName: "xhs"}
+    let posts = new wx.BaaS.TableObject('posts_xhs')
+    let newPost = posts.create()
+
+    // start of upload image and getting iFanr link
+    if (images) {
+      images.forEach(
+        (path) => {
+          // start of defining uploadOneImage
+          let uploadOneImage = function(tempFilePath){
+            new Promise ((resolve, reject)=>{
+              let File = new wx.BaaS.File()
+              let fileParams = {filePath: tempFilePath}
+              let metaData = {categoryName: 'xhs'}
+              File.upload(fileParams, metaData).then(res => {
+                console.log("upload success",res)
+                let data = res.data 
+                resolve(res.data.path)
+              })
+            })
+          }
+          // end of defining uploadOneImage
+
+          uploadOneImage(path)
+         
+        }
+      )}
+    // end of upload image and getting iFanr link
+
+    // start of defining uploadOneImage
+    // end of defining uploadOneImage
+
+
+  },
+  // end of submitPost function
+
+
+
+
+  // start of selectImage function
   selectImage: function(e){
     wx.chooseImage({
       count: 3,
@@ -32,7 +75,7 @@ Page({
       }
     })
   },
-  // end of uploadImage function
+  // end of selectImage function
 
   // start of previewImage function
   preview:function(){

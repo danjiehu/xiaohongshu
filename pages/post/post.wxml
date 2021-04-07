@@ -44,9 +44,7 @@
 
   <!-- start if user is NOT logged-in -->
   <view wx:else>
-
     <button class="button" hover-class="button_hover">please log in to create a new post</button>
-
   </view>
   <!-- end if user is NOT logged-in -->
 
