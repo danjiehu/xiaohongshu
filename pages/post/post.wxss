@@ -13,6 +13,19 @@
   width: 200rpx;
 }
 
+.album {
+  width: 100vw;
+  display: flex;
+  white-space: nowrap;
+  /* display: -webkit-box; */
+  flex-direction: column;
+}
+
+.album image {
+  width: 70vw;
+  margin: 20rpx;
+}
+
 .selection_title {
 
 }

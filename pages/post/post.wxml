@@ -2,28 +2,57 @@
 <view class="container_post">
   <view>create post</view>
   
-  <!-- start if user is NOT logged in -->
-  <!-- end if user is NOT logged in -->
+  <!-- start if user is logged in -->
+  <view wx:if="{{userInfo}}">
+    
+    <form bindsubmit="submitPost">
 
-  <!-- start if user is logged-in -->
-  <form bindsubmit="submitPost">
+      <!-- start of select image -->
 
-    <!-- start of select image -->
-    <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="uploadImage"></image>
-    <!-- end of select image -->
+      <view wx:if="{{!images.length > 0}}">
+        <view>let's upload some images!</view>
+        <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="uploadImage" bindtap="uploadImage"></image>
+      </view>
 
-    <!-- start of edit post title and description -->
-    <view class="selection_title">title</view>
-    <input type="text" placeholder="input title here" />
-    <view class="selection_title">description</view>
-    <input type="text" placeholder="give your post a nice description" />
-    <!-- end of edit post title and description -->
+      <view wx:if="{{images.length > 0}}">
+        <button bindtap="uploadImage">keep uploading</button>
+        <view>Scroll-view to display images horizontally.</view>
+        <scroll-view class="album" scroll-x="{{true}}">
+        <image wx:for="{{images}}" mode="aspectFit" src="{{item}}"/>
+      </scroll-view>
 
-    <!-- start of submit button  -->
-    <!-- <button form-type="submit">test</button> -->
-    <button form-type="submit" class="button" hover-class="button_hover">submit</button>
-    <!-- end of submit button  -->
- 
-  </form>
-  <!-- end if user is logged-in -->
+      </view>
+
+      
+
+
+      <!-- end of select image -->
+
+      <!-- start of edit post title and description -->
+      <view class="selection_title">title</view>
+      <input type="text" placeholder="input title here" />
+      <view class="selection_title">description</view>
+      <input type="text" placeholder="give your post a nice description" />
+      <!-- end of edit post title and description -->
+
+      <!-- start of submit button  -->
+      <!-- <button form-type="submit">test</button> -->
+      <button form-type="submit" class="button" hover-class="button_hover">submit</button>
+      <!-- end of submit button  -->
+
+    </form>
+
+  </view>
+  <!-- end if user is logged in -->
+
+
+  <!-- start if user is NOT logged-in -->
+  <view wx:else>
+
+    <button class="button" hover-class="button_hover">please log in to create a new post</button>
+
+  </view>
+  <!-- end if user is NOT logged-in -->
+
+
 </view>
