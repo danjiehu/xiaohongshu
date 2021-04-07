@@ -12,7 +12,7 @@
         <image class="heart-icon" src="/images/like.png"></image>
         <view class="likes-text">10k</view>
       </view>
-      <view class="text-description">{{post.description}}</view>
+      <view class="text-description">{{post.title}}</view>
       <view class="username">
         <image class="round-img"></image>
         <view class="likes-text">Name username</view>

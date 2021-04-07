@@ -9,7 +9,7 @@ padding-top: 150rpx;
 z-index: 500;
 height: 260rpx;
 margin: 0 auto;
-border-radius: 100rpx;
+border-radius: 80rpx;
 }
 
 .center{
@@ -25,7 +25,7 @@ border-radius: 100rpx;
   margin: 0 auto;
 }
 
-.round-img {
+.round-img-big {
   height: 120rpx;
   margin: 0 auto;
   margin-bottom: 20rpx;
@@ -42,14 +42,13 @@ border-radius: 100rpx;
 
 .grey-container{
   background-color: #f1f1f0;
-  height: 180rpx;
-  border-radius: 100rpx;
-  margin-top: -140rpx;
-  padding: 140rpx 80rpx 30rpx;
+  height: 172rpx;
+  border-radius: 80rpx;
+  margin-top: -142rpx;
+  padding: 140rpx 80rpx 10rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .btn-red{
@@ -61,4 +60,61 @@ border-radius: 100rpx;
   font-size: 11pt;
   font-weight: 400;
   /* margin: 0 auto; */
+}
+
+.cards-masonry{
+  padding: 40rpx 20rpx;
+  column-count: 2;
+  column-gap: 16rpx;
+}
+
+.card{
+  box-sizing: border-box;
+  padding-bottom: 50rpx;
+  width: 100%;
+  display: inline-block;
+}
+
+.img-full{
+  /* height: 400rpx; */
+  background-color: #f1f1f0;
+  border-radius: 32rpx;
+  width: 100%;
+}
+
+.user-likes{
+  margin-left: 20rpx;
+  display: flex;
+  align-items: center;
+  padding-top: 8rpx;
+}
+
+.heart-icon{
+  height: 46rpx;
+  width: 46rpx;
+}
+
+.likes-text{
+  font-size: small;
+  font-weight: 400;
+  padding-left: 10rpx;
+}
+
+.text-description {
+  margin-left: 20rpx;
+  font-size: small;
+}
+
+.username {
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.round-img {
+  height: 56rpx;
+  width: 56rpx;
+  background-color: #E4E4E4;
+  border-radius: 50rpx;
 }
