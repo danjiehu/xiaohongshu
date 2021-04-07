@@ -24,5 +24,8 @@ Page({
       err => {
         console.log('something went wrong!', err)
     })
+    wx.switchTab({
+      url: '/pages/home/home',
+    })
   },
 })
