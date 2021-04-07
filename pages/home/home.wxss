@@ -65,6 +65,7 @@ page{
 
 .text-description {
   margin-left: 20rpx;
+  font-size: small;
 }
 
 .username {
