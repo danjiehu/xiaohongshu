@@ -15,7 +15,7 @@
       <view class="text-description">{{post.title}}</view>
       <view class="username">
         <image class="round-img"></image>
-        <view class="likes-text">Name username</view>
+        <view class="likes-text">{{post.user_id.nickname}}</view>
       </view>
     </view>
   </view>
