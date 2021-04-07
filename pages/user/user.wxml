@@ -1,2 +1,11 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="user-container" style="position: sticky;">
+  <view class="center">
+    <image class="round-img"></image>
+    <view class="subtitle">Name username</view>
+  </view>
+</view>
+<view class="grey-container" style="z-index: 0;">
+  <view class="txt-small">78 followers  •  103 following</view>
+  <view class="btn-red">Follow</view>
+</view>
