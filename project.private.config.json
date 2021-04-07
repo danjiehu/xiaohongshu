@@ -24,13 +24,21 @@
           "scene": null
         },
         {
-          "name": "post",
-          "pathName": "pages/post/post",
+          "name": "pages/show/show",
+          "pathName": "pages/show/show",
+          "query": "id=606c535061fa327015683b65",
           "scene": null
         },
         {
-          "name": "show",
-          "pathName": "pages/show/show",
+          "name": "pages/post/post",
+          "pathName": "pages/post/post",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user",
+          "pathName": "pages/user/user",
+          "query": "",
           "scene": null
         }
       ]

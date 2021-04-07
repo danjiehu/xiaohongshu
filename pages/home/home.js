@@ -1,66 +1,51 @@
 // pages/home/home.js
+const app = getApp()
+
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
+    posts: [],
+    currentUser: null
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
 
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
+
+    const self = this
+    let Posts = new wx.BaaS.TableObject('posts_xhs')
+
+    Posts.expand('user_id').find().then(
+      (res) => {
+        console.log('your post has been loaded',res)
+        self.setData({
+          posts: res.data.objects
+        })
+      }, (err) => {
+        console.log('your post failed',err)
+      }
+    )
   },
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
+  userInfoHandler: function(userInfo) {
+    let self = this
+    wx.BaaS.auth.loginWithWechat(userInfo).then(
+      (res) => {
+      console.log('userInfo', res);
+      self.setData({currentUser: res});
+      wx.setStorageSync('userInfo', res)
+      },
+      err => {
+        console.log('something went wrong!', err)
+    })
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
+  navigateToPost: function(e) {
+    console.log('calling a post', e)
+    wx.navigateTo({
+      url: `/pages/show/show?id=${e.currentTarget.dataset.id}`,
+    })
   }
 })

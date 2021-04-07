@@ -32,8 +32,10 @@ page{
 }
 
 .card{
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   padding-bottom: 50rpx;
+  width: 100%;
+  display: inline-block;
 }
 
 .img-full{
@@ -63,6 +65,7 @@ page{
 
 .text-description {
   margin-left: 20rpx;
+  font-size: small;
 }
 
 .username {

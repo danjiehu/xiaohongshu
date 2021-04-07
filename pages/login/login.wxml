@@ -5,5 +5,5 @@
   <view class="subtitle">a shopping sharing community</view>
 </view>
 <view class="container-btn">
-  <view class="btn-red">enter</view>
+  <button class="btn-red" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">enter</button>
 </view>
