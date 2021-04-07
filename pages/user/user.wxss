@@ -1,1 +1,64 @@
 /* pages/user/user.wxss */
+page{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.user-container{
+background-color: #fff;
+padding-top: 150rpx;
+z-index: 500;
+height: 260rpx;
+margin: 0 auto;
+border-radius: 100rpx;
+}
+
+.center{
+  margin: 0 auto;
+  width: 50%;
+}
+
+.subtitle{
+  font-size: small;
+  font-weight: 400;
+  padding-left: 10rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.round-img {
+  height: 120rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  width: 120rpx;
+  background-color: #E4E4E4;
+  border-radius: 200rpx;
+  display: block;
+}
+
+.txt-small{
+  font-size: small;
+  font-weight: 400;
+}
+
+.grey-container{
+  background-color: #f1f1f0;
+  height: 180rpx;
+  border-radius: 100rpx;
+  margin-top: -140rpx;
+  padding: 140rpx 80rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.btn-red{
+  background-color: #FF6538;
+  padding: 30rpx 60rpx;
+  border-radius: 100rpx;
+  color: #fff;
+  /* width: 70rpx; */
+  font-size: 11pt;
+  font-weight: 400;
+  /* margin: 0 auto; */
+}
