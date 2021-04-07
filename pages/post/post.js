@@ -18,7 +18,7 @@ Page({
   },
 
   // start of uploadImage function
-  uploadImage: function(e){
+  selectImage: function(e){
     wx.chooseImage({
       count: 3,
       sizeType: ['original', 'compressed'],
@@ -35,7 +35,7 @@ Page({
   // end of uploadImage function
 
   // start of previewImage function
-  preview(){
+  preview:function(){
     wx.previewImage({
       urls: this.data.images,
     })

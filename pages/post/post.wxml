@@ -11,20 +11,16 @@
 
       <view wx:if="{{!images.length > 0}}">
         <view>let's upload some images!</view>
-        <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="uploadImage" bindtap="uploadImage"></image>
+        <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="selectImage"></image>
       </view>
 
       <view wx:if="{{images.length > 0}}">
-        <button bindtap="uploadImage">keep uploading</button>
-        <view>Scroll-view to display images horizontally.</view>
+        <button bindtap="selectImage">re-select</button>
+        <view>↓ Scroll-view to display images horizontally.</view>
         <scroll-view class="album" scroll-x="{{true}}">
-        <image wx:for="{{images}}" mode="aspectFit" src="{{item}}"/>
-      </scroll-view>
-
+        <image wx:for="{{images}}" mode="aspectFit" src="{{item}}" bindtap="preview"/>
+        </scroll-view>
       </view>
-
-      
-
 
       <!-- end of select image -->
 
