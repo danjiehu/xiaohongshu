@@ -1,4 +1,6 @@
 // pages/home/home.js
+const app = getApp()
+
 Page({
 
   data: {
@@ -7,6 +9,11 @@ Page({
   },
 
   onLoad: function (options) {
+
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
+
     const self = this
     let Posts = new wx.BaaS.TableObject('posts_xhs')
 
@@ -20,5 +27,25 @@ Page({
         console.log('your post failed',err)
       }
     )
+  },
+
+  userInfoHandler: function(userInfo) {
+    let self = this
+    wx.BaaS.auth.loginWithWechat(userInfo).then(
+      (res) => {
+      console.log('userInfo', res);
+      self.setData({currentUser: res});
+      wx.setStorageSync('userInfo', res)
+      },
+      err => {
+        console.log('something went wrong!', err)
+    })
+  },
+
+  navigateToPost: function(e) {
+    console.log('calling a post', e)
+    wx.navigateTo({
+      url: `/pages/show/show?id=${e.currentTarget.dataset.id}`,
+    })
   }
 })

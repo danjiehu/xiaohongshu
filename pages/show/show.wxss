@@ -12,10 +12,9 @@ page {
   box-sizing: border-box;
 }
 
-.image {
-  height: 40vh;
+.img-full {
   width: 100%;
-  background-color: #f1f1f0;
+  /* background-color: #f1f1f0; */
   border-radius: 72rpx 72rpx 0 0;
 }
 
@@ -23,6 +22,11 @@ page {
   border-radius: 0 0 72rpx 72rpx;
   padding: 40rpx;
   background-color: white;
+}
+
+.heart-icon {
+  height: 46rpx;
+  width: 46rpx;
 }
 
 .meta-flex-box {
@@ -55,7 +59,7 @@ page {
 }
 
 .likes-count {
-  padding-right: 20rpx;
+  padding-right: 10rpx;
 }
 
 .post-title {

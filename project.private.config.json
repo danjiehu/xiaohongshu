@@ -1,5 +1,4 @@
 {
-  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -13,17 +12,34 @@
     "miniprogram": {
       "list": [
         {
-          "name": "Home",
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
           "pathName": "pages/home/home",
           "query": "",
           "scene": null
         },
         {
-          "name": "Show",
+          "name": "pages/show/show",
           "pathName": "pages/show/show",
-=======
-          "name": "post",
+          "query": "id=606c535061fa327015683b65",
+          "scene": null
+        },
+        {
+          "name": "pages/post/post",
           "pathName": "pages/post/post",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
         }
       ]
     }

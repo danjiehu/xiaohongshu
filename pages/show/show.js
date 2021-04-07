@@ -1,66 +1,48 @@
 // pages/show/show.js
+
+const app = getApp()
+
 Page({
 
-  /**
-   * Page initial data
-   */
   data: {
-
+    currentUser: null,
+    post: [],
+    comments: [],
+    likes: []
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
 
-  },
+    let Posts = new wx.BaaS.TableObject('posts_xhs')
+    
+    const self = this
+    Posts.expand('user_id').get(options.id).then(
+      (res) => {
+        console.log('post id', res)
+        self.setData ({
+          post: res.data
+        })
+      },
+      (err) => {
+        console.log('error', err)
+      }
+    )
 
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function () {
-
+    let Comments = new wx.BaaS.TableObject('comments_log_xhs')
+    let query = new wx.BaaS.Query();
+    query.compare('post_id', '=', options.id)
+    Comments.setQuery(query).find().then(
+      (res) => {
+        self.setData({
+          comments: res.data.objects
+        })
+      },
+      (err) => {
+        console.log('err', err)
+      }
+    )
   }
 })
