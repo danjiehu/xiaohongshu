@@ -12,12 +12,17 @@ App({
     const self = this
     wx.BaaS.auth.getCurrentUser().then(
       (res) => {
-      self.globalData.userInfo = res;
-      wx.setStorageSync('userInfo', res);
+        self.globalData.userInfo = res
+        wx.setStorageSync('userInfo', res)
       }
     )
   },
   globalData: {
     userInfo: wx.getStorageSync('userInfo')
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "A message to tell the user why you need permission"
+    }
   }
 })
