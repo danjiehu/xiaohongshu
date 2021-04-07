@@ -50,16 +50,11 @@ Page({
       )}
     // end of upload image and getting iFanr link
 
-    // start of defining uploadOneImage
-    // end of defining uploadOneImage
+    
 
-
-  },
   // end of submitPost function
-
-
-
-
+  },
+  
   // start of selectImage function
   selectImage: function(e){
     wx.chooseImage({
