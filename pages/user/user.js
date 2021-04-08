@@ -1,4 +1,6 @@
 // pages/user/user.js
+const app = getApp()
+
 Page({
   
   data: {
@@ -7,10 +9,15 @@ Page({
   },
 
   onLoad: function (options) {
+
+    this.setData({
+      currentUser: app.globalData.userInfo
+    })
+
     const self = this
     let Posts = new wx.BaaS.TableObject('posts_xhs')
 
-    Posts.find().then(
+    Posts.expand('user_id').find().then(
       (res) => {
         console.log('your post has been loaded',res)
         self.setData({

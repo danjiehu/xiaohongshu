@@ -18,7 +18,7 @@ Page({
     let Posts = new wx.BaaS.TableObject('posts_xhs')
 
     Posts.expand('user_id').find().then(
-      (res) => {
+      (res) => { 
         console.log('your post has been loaded',res)
         self.setData({
           posts: res.data.objects
