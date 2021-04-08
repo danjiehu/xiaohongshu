@@ -4,7 +4,7 @@
   <view class="details-area">
     <view class="meta-flex-box">
       <view class="user-details">
-        <view class="user-avatar" src="{{post.user_id.avatar}}"></view>
+        <image class="user-avatar" src="{{post.user_id.avatar}}"></image>
         <view class="user-name">{{post.user_id.nickname}}</view>
       </view>
       <view class="likes-details">
@@ -28,9 +28,19 @@
 <view class="feedback-card">
   <view class="sub-title">Share your feedback</view>
   <view class="comment-flexbox" wx:for="{{comments}}" wx:key="key" wx:for-item="comment">
-    <view class="user-avatar-small"></view>
-    <view class="user-name-small">{{currentUser.avatar}}</view>
+    <image src="{{comment.user_id.avatar}}" class="user-avatar-small"></image>
+    <view class="user-name-small">{{comment.user_id.nickname}}</view>
     <view class="user-comment">{{comment.content}}</view>
     <view class="user-time">02:08</view>
+  </view>
+  <view wx:if="{{!currentUser}}">
+    <button class="button red" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">Log In</button>
+  </view>
+  <view wx:else class="new-comment-flexbox">
+    <image src="{{currentUser.avatar}}" class="user-avatar-small"></image>
+    <form action="submit" bindsubmit="addComment">
+      <input type="text" name="comment" placeholder="Add a comment" placeholder-class="user-comment"/>
+      <button form-type="submit" class="button red" style="width: 200rpx">Send</button>
+    </form>
   </view>
 </view>
