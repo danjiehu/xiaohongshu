@@ -22,8 +22,6 @@ Page({
     // let file = new wx.BaaS.File()
       // let fileParams = {filePath: page.data.images}
       // let metaData = {categoryName: "xhs"}
-    let posts = new wx.BaaS.TableObject('posts_xhs')
-    let newPost = posts.create()
 
     // start of upload image and getting iFanr link
     if (images) {
@@ -43,8 +41,17 @@ Page({
             })
           }
           // end of defining uploadOneImage
-
           uploadOneImage(path)
+          // end of uploading all images
+
+          //  start of creating new post on iFanr
+          let posts = new wx.BaaS.TableObject('posts_xhs')
+          let newPost = posts.create()
+          newPost({
+            
+          })
+
+
          
         }
       )}
