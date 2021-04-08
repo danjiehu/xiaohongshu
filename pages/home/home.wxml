@@ -14,7 +14,7 @@
       </view>
       <view class="text-description">{{post.title}}</view>
       <view class="username">
-        <image class="round-img"></image>
+        <image class="round-img" src="{{post.user_id.avatar}}"></image>
         <view class="likes-text">{{post.user_id.nickname}}</view>
       </view>
     </view>
