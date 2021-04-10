@@ -22,7 +22,7 @@ Page({
       (res) => { 
         console.log('your post has been loaded',res)
         self.setData({
-          posts: res.data.objects
+          posts: res.data.objects.reverse()
         })
       }, (err) => {
         console.log('your post failed',err)
