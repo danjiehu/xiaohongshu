@@ -14,6 +14,10 @@
   border-radius: 50rpx;
 }
 
+.smalltext{
+  font-size: smaller;
+}
+
 form {
   display:flex
 }
@@ -22,6 +26,12 @@ form {
   width: 100%;
 }
 
+.titletext{
+  color: #4d4d4d; 
+  font-size: large; 
+  font-weight: 600; 
+  margin-bottom: 30rpx
+}
 
 .album {
   width: 100vw;
@@ -33,7 +43,7 @@ form {
 
 .album image {
   width: 70vw;
-  margin: 20rpx;
+  margin: 2rpx;
 }
 
 .selection_title {
@@ -121,5 +131,5 @@ page{
 
 input {
   padding: 15rpx 0;
-  width: 70%;
+  width: 100%;
 }
