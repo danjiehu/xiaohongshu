@@ -8,20 +8,6 @@
   ],
 
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/home/home",
-      "text": "HOME"
-      },
-      {"pagePath": "pages/post/post",
-        "text": "POST"
-        },
-      {"pagePath": "pages/user/user",
-      "text": "USER"
-      }
-    ]
-  },
-
-  "tabBar": {
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#fff",
