@@ -64,10 +64,13 @@ input {
 
 page{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100vw;
 }
 .main-container {
   background-color: #f1f1f0;
-  padding: 80rpx 80rpx;
+  padding: 100rpx 80rpx 140rpx;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .title{
@@ -100,16 +103,23 @@ page{
   background-color: #fff;
   padding: 100rpx 80rpx;
   display: flex;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  z-index: 1000;
+  margin-top: -38px;
 }
 
 .btn-red{
-  margin-top: 20px !important;
+  margin-top: 35px !important;
   background-color: #FF6538;
-  padding: 50rpx 80rpx;
+  padding: 40rpx 40rpx;
   border-radius: 100rpx;
   color: #fff;
   width: 90rpx;
+}
+
+input {
+  padding: 15rpx 0;
+  width: 70%;
 }
