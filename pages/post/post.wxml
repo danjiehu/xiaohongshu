@@ -1,27 +1,29 @@
 
-<view class="container_post">
-  <view>create post</view>
-  
+<view class="main-container">
+  <view class="title">create</view>
+  <view class="red-highlight">your pin</view>
+</view>
   <!-- start if user is logged in -->
-  <view wx:if="{{userInfo}}">
+  <view wx:if="{{userInfo}}" class="container-btn">
     
     <form bindsubmit="submitPost">
 
-      <!-- start of select image -->
+     
+      <!-- start of upload_content -->
+      <view class="upload_content">
+         <!-- start of select image -->
+        <view wx:if="{{!images.length > 0}}">
+          <view>let's upload some images!</view>
+          <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="selectImage" style="margin-top: 30rpx; border-radius:10rpx"></image>
+       </view>
 
-      <view wx:if="{{!images.length > 0}}">
-        <view>let's upload some images!</view>
-        <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="selectImage"></image>
-      </view>
-
-      <view wx:if="{{images.length > 0}}">
+       <view wx:if="{{images.length > 0}}">
         <button bindtap="selectImage">re-select</button>
         <view>↓ Scroll-view to display images horizontally.</view>
         <scroll-view class="album" scroll-x="{{true}}">
         <image wx:for="{{images}}" mode="aspectFit" src="{{item}}" bindtap="preview"/>
         </scroll-view>
       </view>
-
       <!-- end of select image -->
 
       <!-- start of edit post title and description -->
@@ -32,9 +34,18 @@
       <!-- end of edit post title and description -->
 
       <!-- start of submit button  -->
-      <!-- <button form-type="submit">test</button> -->
-      <button form-type="submit" class="button" hover-class="button_hover">submit</button>
+      <button form-type="submit" class="btn-red" hover-class="button_hover">submit</button>
       <!-- end of submit button  -->
+
+
+      </view>
+       <!-- end of upload_content -->
+
+      
+
+      
+
+
 
     </form>
 
@@ -44,9 +55,6 @@
 
   <!-- start if user is NOT logged-in -->
   <view wx:else>
-    <button class="button" hover-class="button_hover">please log in to create a new post</button>
+    <button class="btn-red" hover-class="button_hover">please log in to create a new post</button>
   </view>
   <!-- end if user is NOT logged-in -->
-
-
-</view>

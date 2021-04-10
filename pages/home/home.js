@@ -9,7 +9,6 @@ Page({
   },
 
   onLoad: function (options) {
-
     this.setData({
       currentUser: app.globalData.userInfo
     })
