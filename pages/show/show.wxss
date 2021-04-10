@@ -20,13 +20,13 @@ page {
 
 .details-area {
   border-radius: 0 0 72rpx 72rpx;
-  padding: 40rpx;
+  padding: 60rpx 40rpx 40rpx;
   background-color: white;
 }
 
 .heart-icon {
-  height: 46rpx;
-  width: 46rpx;
+  height: 36rpx;
+  width: 36rpx;
 }
 
 .meta-flex-box {
