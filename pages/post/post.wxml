@@ -11,15 +11,15 @@
      
       <!-- start of upload_content -->
       <view class="upload_content">
-        <view style="color: #4d4d4d; font-size: large; font-weight: 600; margin-bottom: 30rpx">Create pin</view>
+        <view class="titletext">Create pin</view>
          <!-- start of select image -->
         <view wx:if="{{!images.length > 0}}">
           <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="selectImage" style="margin-top: 30rpx; border-radius:10rpx"></image>
        </view>
 
        <view wx:if="{{images.length > 0}}">
-        <button bindtap="selectImage">re-select</button>
-        <view>↓ Scroll-view to display images horizontally.</view>
+        <button style="border-radius: 100rpx; font-size: medium; font-weight: 400;" bindtap="selectImage">Choose again</button>
+        <!-- <view class="smalltext">Scroll right to see all your images</view> -->
         <scroll-view class="album" scroll-x="{{true}}">
         <image wx:for="{{images}}" mode="aspectFit" src="{{item}}" bindtap="preview"/>
         </scroll-view>
@@ -27,14 +27,14 @@
       <!-- end of select image -->
 
       <!-- start of edit post title and description -->
-      <view class="selection_title">Title</view>
-      <input name="title" type="text" placeholder="input title here" />
-      <view class="selection_title">Description</view>
-      <input name="description" type="text" placeholder="give your post a nice description" />
+      <view class="selection_title">Your post title</view>
+      <input name="title" type="text" placeholder="Type your title here" />
+      <view class="selection_title">Your description</view>
+      <input name="description" type="text" placeholder="Say a few words about it" />
       <!-- end of edit post title and description -->
 
       <!-- start of submit button  -->
-      <button form-type="submit" class="btn-red" hover-class="button_hover">submit</button>
+      <button form-type="submit" class="btn-red" hover-class="button_hover">SEND</button>
       <!-- end of submit button  -->
 
 
