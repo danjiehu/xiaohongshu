@@ -2,14 +2,14 @@
 <view class="post-card">
   <view class='swiper-wrapper'>
     <swiper class='swipers' autoplay="false" current="{{activeSwiper}}" bindchange="swiperChange">
-      <block wx:for="{{swiperList}}" wx:key>
+      <block wx:for="{{swiperList}}" wx:key="key1">
         <swiper-item>
           <image mode="aspectFill" class="swiper_image" src="{{item}}" lazy-load="true" />
         </swiper-item>
       </block>
     </swiper>
     <view class="dots" >
-      <block wx:for="{{swiperList}}" wx:key>
+      <block wx:for="{{swiperList}}" wx:key="key2">
         <view class="dot {{index == activeSwiper ? ' active' : ''}}"></view>
       </block>
     </view>
@@ -21,8 +21,9 @@
         <view class="user-name">{{post.user_id.nickname}}</view>
       </view>
       <view class="likes-details">
-        <view class="likes-count">10k</view>
-        <image class="heart-icon" src="/images/like.svg"></image>
+        <view wx:if="{{hasLike}}" class="likes-count">1</view>
+        <image wx:if="{{!hasLike}}" bindtap="addLike" class="heart-icon" src="/images/nolike.svg"></image>
+        <image wx:if="{{hasLike}}" bindtap="removeLike" class="heart-icon" src="/images/like.svg"></image>
       </view>
     </view>
     <view>
