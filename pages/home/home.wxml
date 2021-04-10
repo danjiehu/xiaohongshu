@@ -9,8 +9,9 @@
     <view class="card" data-id="{{post.id}}" bindtap="navigateToPost">
       <image mode="widthFix" class="img-full" src="{{post.gallery[0].path}}"></image>
       <view class="user-likes">
-        <image class="heart-icon" src="/images/like.png"></image>
-        <view class="likes-text">10k</view>
+        <image wx:if="{{!post.hasLike}}" class="heart-icon" src="/images/nolike.svg"></image>
+        <image wx:if="{{post.hasLike}}" class="heart-icon" src="/images/like.svg"></image>
+        <view class="likes-text">{{post.likes}}</view>
       </view>
       <view class="text-description">{{post.title}}</view>
       <view class="username">
