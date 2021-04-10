@@ -83,7 +83,18 @@ Page({
         "gallery": res,
         "user_id": page.data.userInfo.id
       })
-      newPost.save().then(res=>{console.log("saveSuccess",res)});
+      newPost.save().then(res=>{console.log("saveSuccess",res)
+      wx.switchTab({
+        url: '/pages/home/home',
+      })
+
+      wx.showToast({
+        title: 'success!',
+      })
+
+    }
+  
+      );
     })
   },
 // end of submitPost 
