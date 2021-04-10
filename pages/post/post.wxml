@@ -11,7 +11,7 @@
      
       <!-- start of upload_content -->
       <view class="upload_content">
-        <view style="color: #4d4d4d;">Create pin</view>
+        <view style="color: #4d4d4d; font-size: large; font-weight: 600; margin-bottom: 30rpx">Create pin</view>
          <!-- start of select image -->
         <view wx:if="{{!images.length > 0}}">
           <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="selectImage" style="margin-top: 30rpx; border-radius:10rpx"></image>
@@ -27,9 +27,9 @@
       <!-- end of select image -->
 
       <!-- start of edit post title and description -->
-      <view class="selection_title">title</view>
+      <view class="selection_title">Title</view>
       <input name="title" type="text" placeholder="input title here" />
-      <view class="selection_title">description</view>
+      <view class="selection_title">Description</view>
       <input name="description" type="text" placeholder="give your post a nice description" />
       <!-- end of edit post title and description -->
 
