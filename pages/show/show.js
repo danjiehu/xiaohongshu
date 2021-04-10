@@ -93,7 +93,9 @@ Page({
     console.log("changed", e.detail.current)
     this.setData({
       activeSwiper: e.detail.current
-
+    })
+  },
+  
   userInfoHandler: function(userInfo) {
     let self = this
     wx.BaaS.auth.loginWithWechat(userInfo).then(
@@ -107,6 +109,4 @@ Page({
 
     })
   }
-  
-  
 })
