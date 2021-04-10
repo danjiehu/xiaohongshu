@@ -7,7 +7,7 @@
 <view class="cards-masonry">
   <view wx:for="{{posts}}" wx:key="key" wx:for-item="post">
     <view class="card" data-id="{{post.id}}" bindtap="navigateToPost">
-      <image mode="widthFix" class="img-full" src="{{post.img_1.path}}"></image>
+      <image mode="widthFix" class="img-full" src="{{post.gallery[0].path}}"></image>
       <view class="user-likes">
         <image class="heart-icon" src="/images/like.png"></image>
         <view class="likes-text">10k</view>
