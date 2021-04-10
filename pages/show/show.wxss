@@ -33,6 +33,7 @@ page {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20rpx 0;
 }
 
 .user-details {
