@@ -12,7 +12,9 @@ Page({
     this.setData({
       currentUser: app.globalData.userInfo
     })
+  },
 
+  onShow: function(){
     const self = this
     let Posts = new wx.BaaS.TableObject('posts_xhs')
 
