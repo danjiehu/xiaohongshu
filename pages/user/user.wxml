@@ -1,8 +1,8 @@
 <!--pages/user/user.wxml-->
 <view class="user-container" style="position: sticky;">
   <view class="center">
-    <image class="round-img-big"></image>
-    <view class="subtitle">Name username</view>
+    <image src="{{currentUser.avatar}}" class="round-img-big"></image>
+    <view class="subtitle">{{currentUser.nickname}}</view>
   </view>
 </view>
 <view class="grey-container" style="z-index: 0;">
@@ -12,7 +12,7 @@
 
 <view class="cards-masonry">
   <view wx:for="{{posts}}" wx:key="key" wx:for-item="post">
-    <view class="card" data-id="{{post.id}}" bindtap="navigateToPost">
+    <view wx:if="{{currentUser.id === post.user_id.id}}" class="card" data-id="{{post.id}}" bindtap="navigateToPost">
       <image mode="widthFix" class="img-full" src="{{post.img_1.path}}"></image>
       <view class="user-likes">
         <image class="heart-icon" src="/images/like.png"></image>
@@ -20,8 +20,8 @@
       </view>
       <view class="text-description">{{post.title}}</view>
       <view class="username">
-        <image class="round-img"></image>
-        <view class="likes-text">Name username</view>
+        <image src="{{post.user_id.avatar}}" class="round-img"></image>
+        <view class="likes-text">{{post.user_id.nickname}}</view>
       </view>
     </view>
   </view>

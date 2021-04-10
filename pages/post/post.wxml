@@ -26,9 +26,9 @@
 
       <!-- start of edit post title and description -->
       <view class="selection_title">title</view>
-      <input type="text" placeholder="input title here" />
+      <input name="title" type="text" placeholder="input title here" />
       <view class="selection_title">description</view>
-      <input type="text" placeholder="give your post a nice description" />
+      <input name="description" type="text" placeholder="give your post a nice description" />
       <!-- end of edit post title and description -->
 
       <!-- start of submit button  -->

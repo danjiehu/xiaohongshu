@@ -18,29 +18,27 @@ Page({
     // duration: 500
   },
 
-  // changeIndicatorDots() {
-  //   this.setData({
-  //     indicatorDots: !this.data.indicatorDots
-  //   })
-  // },
-
-  // changeAutoplay() {
-  //   this.setData({
-  //     autoplay: !this.data.autoplay
-  //   })
-  // },
-
-  // intervalChange(e) {
-  //   this.setData({
-  //     interval: e.detail.value
-  //   })
-  // },
-
-  // durationChange(e) {
-  //   this.setData({
-  //     duration: e.detail.value
-  //   })
-  // },
+  addComment(event) {
+    console.log(event)
+    const comment = event.detail.value.comment
+    let Comments = new wx.BaaS.TableObject('comments_log_xhs')
+    let newComment = Comments.create();
+    newComment.set({
+      content: comment,
+      post_id: this.data.post.id,
+      user_id: this.data.currentUser.id
+    })
+    newComment.save().then(
+      (res) => {
+        console.log('new comment saved', res)
+        let commentArray = this.data.comments
+        commentArray.push(res.data)
+        this.setData({
+          comments: commentArray
+        })
+      }
+    )
+  },
 
   onLoad: function (options) {
     this.setData({
@@ -79,7 +77,7 @@ Page({
     let Comments = new wx.BaaS.TableObject('comments_log_xhs')
     let query = new wx.BaaS.Query();
     query.compare('post_id', '=', options.id)
-    Comments.setQuery(query).find().then(
+    Comments.expand('user_id').setQuery(query).find().then(
       (res) => {
         self.setData({
           comments: res.data.objects
@@ -90,10 +88,25 @@ Page({
       }
     )
   },
+
   swiperChange(e){
     console.log("changed", e.detail.current)
     this.setData({
       activeSwiper: e.detail.current
+
+  userInfoHandler: function(userInfo) {
+    let self = this
+    wx.BaaS.auth.loginWithWechat(userInfo).then(
+      (res) => {
+      console.log('userInfo', res);
+      self.setData({currentUser: res});
+      wx.setStorageSync('userInfo', res)
+      },
+      err => {
+        console.log('something went wrong!', err)
+
     })
   }
+  
+  
 })

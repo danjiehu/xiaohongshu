@@ -36,16 +36,17 @@ page {
 }
 
 .user-details {
+  margin-bottom: 20rpx;
   display: flex;
   align-items: center;
 }
 
 .user-avatar {
-  height: 100rpx;
-  width: 100rpx;
+  height: 50rpx;
+  width: 50rpx;
   border-radius: 50%;
   /* background-color: #f1f1f0; */
-  margin-right: 20rpx;
+  margin: 0 20rpx 0 0;
 }
 
 .user-name {
@@ -120,7 +121,7 @@ swiper-item {
 .feedback-card {
   width: 100vw;
   box-sizing: border-box;
-  height: 20vh;
+  /* height: 20vh; */
   border-radius: 80rpx;
   padding: 40rpx;
   background-color: white;
@@ -142,7 +143,7 @@ swiper-item {
   height: 60rpx;
   width: 60rpx;
   border-radius: 50%;
-  background-color: #f1f1f0;
+  /* background-color: #f1f1f0; */
   margin-right: 20rpx;
 }
 
@@ -162,6 +163,7 @@ swiper-item {
   font-size: 9pt;
   color: #ADADAD;
 }
+
 
 .swiper-wrapper {
   height: auto;
@@ -205,3 +207,15 @@ swiper-item {
 .active {
   background-color: #FF6538;
 }
+
+input {
+  font-size: 11pt;
+  padding-bottom: 20rpx;
+}
+
+.new-comment-flexbox {
+  display: flex;
+  align-content: baseline;
+  padding: 20rpx;
+}
+
