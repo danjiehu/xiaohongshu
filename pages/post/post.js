@@ -26,8 +26,8 @@ Page({
       File.upload(fileParams, metaData).then(res => {
         console.log("upload success",res)
         // let data = res.data 
-        console.log("res.data.path", res.data.path)
-        let url = res.data.path
+        console.log("res.data.path", res.data.file)
+        let url = res.data.file
         // page.data.images_url.push(url)
         resolve(url)
       })
@@ -77,7 +77,7 @@ Page({
       newPost.set({
         "title": e.detail.value.title,
         "description": e.detail.value.description,
-        "gallery_url": res
+        "gallery": res
       })
       newPost.save().then(res=>{console.log("saveSuccess",res)});
     })
