@@ -7,11 +7,14 @@ Page({
   data: {
     userInfo: wx.getStorageSync('userInfo'),
     images: [], // this is an array of tempt file path from wechat after user select the image
+    showForm: false
     // images_url: []
   },
 
   onLoad: function () {
-   
+   this.setData({
+     showForm: true
+   })
   },
 
   // start of defining uploadOneImage
@@ -77,7 +80,8 @@ Page({
       newPost.set({
         "title": e.detail.value.title,
         "description": e.detail.value.description,
-        "gallery": res
+        "gallery": res,
+        "user_id": page.data.userInfo.id
       })
       newPost.save().then(res=>{console.log("saveSuccess",res)});
     })

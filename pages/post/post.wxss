@@ -1,17 +1,26 @@
 /* pages/post/post.wxss */
 
-.container_post {
+/* .container_post {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 100rpx 50rpx;
   box-sizing: border-box;
-}
+} */
 
 .post-image {
   width: 200rpx;
 }
+
+form{
+  display:flex
+}
+
+.upload_content {
+  width: 100vw
+}
+
 
 .album {
   width: 100vw;
@@ -27,7 +36,7 @@
 }
 
 .selection_title {
-
+  margin-top: 30rpx;
 }
 
 input {
@@ -50,4 +59,53 @@ input {
   padding: 20rpx;
   text-align: center;
   border-radius: 40rpx;
+}
+
+page{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main-container {
+  background-color: #f1f1f0;
+  padding: 190rpx 80rpx;
+}
+
+.title{
+  padding-top: 200rpx;
+  font-size: x-large;
+  font-weight: 600;
+  color: #333333;
+  margin-top: 10rpx;
+}
+
+.red-highlight{
+  padding: 16rpx 22rpx;
+  width: 180rpx;
+  border-radius: 8rpx;
+  font-size: xx-large;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 10rpx;
+  margin-bottom: 26rpx;
+  background-color: #FF6538;
+}
+
+.subtitle {
+  font-size: medium;
+  font-weight: 400;
+}
+
+.container-btn{
+  border-radius: 100rpx;
+  background-color: #fff;
+  padding: 100rpx 80rpx;
+  display: flex;
+}
+
+.btn-red{
+  margin-top: 20px !important;
+  background-color: #FF6538;
+  padding: 50rpx 80rpx;
+  border-radius: 100rpx;
+  color: #fff;
+  width: 90rpx;
 }
