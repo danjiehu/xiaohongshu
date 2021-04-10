@@ -1,6 +1,5 @@
 <!--pages/show/show.wxml-->
 <view class="post-card">
-
   <view class='swiper-wrapper'>
     <swiper class='swipers' autoplay="false" current="{{activeSwiper}}" bindchange="swiperChange">
       <block wx:for="{{swiperList}}" wx:key>
@@ -15,38 +14,30 @@
       </block>
     </view>
   </view>
-</view>
-    <view class="details-area">
-      <view class="meta-flex-box">
-        <view class="user-details">
-          <view class="user-avatar" src="{{post.user_id.avatar}}"></view>
-          <view class="user-name">{{post.user_id.nickname}}</view>
-        </view>
-        <view class="likes-details">
-          <view class="likes-count">10k</view>
-          <image class="heart-icon" src="/images/like.svg"></image>
-        </view>
-
-  <image mode="widthFix" class="img-full" src="{{post.img_1.path}}"></image>
   <view class="details-area">
     <view class="meta-flex-box">
       <view class="user-details">
         <image class="user-avatar" src="{{post.user_id.avatar}}"></image>
         <view class="user-name">{{post.user_id.nickname}}</view>
-
       </view>
-      <view>
-        <view class="post-title">{{post.title}}</view>
-        <view class="post-desc">{{post.description}}</view>
-      </view>
-      <view class="center-buttons">
-        <view class="button-area">
-          <view class="button black">Visit</view>
-          <view class="button red">Save</view>
-        </view>
-        <image src="/images/comment.svg" class="post-comments"></image>
+      <view class="likes-details">
+        <view class="likes-count">10k</view>
+        <image class="heart-icon" src="/images/like.svg"></image>
       </view>
     </view>
+    <view>
+      <view class="post-title">{{post.title}}</view>
+      <view class="post-desc">{{post.description}}</view>
+    </view>
+    <view class="center-buttons">
+      <view class="button-area">
+        <view class="button black">Visit</view>
+        <view class="button red">Save</view>
+      </view>
+      <image src="/images/comment.svg" class="post-comments"></image>
+    </view>
+  </view>
+</view>
 <view class="feedback-card">
   <view class="sub-title">Share your feedback</view>
   <view class="comment-flexbox" wx:for="{{comments}}" wx:key="key" wx:for-item="comment">
