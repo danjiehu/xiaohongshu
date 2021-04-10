@@ -11,6 +11,7 @@
 
 .post-image {
   width: 200rpx;
+  border-radius: 50rpx;
 }
 
 form{
@@ -66,7 +67,7 @@ page{
 }
 .main-container {
   background-color: #f1f1f0;
-  padding: 190rpx 80rpx;
+  padding: 80rpx 80rpx;
 }
 
 .title{
@@ -79,7 +80,7 @@ page{
 
 .red-highlight{
   padding: 16rpx 22rpx;
-  width: 180rpx;
+  width: 300rpx;
   border-radius: 8rpx;
   font-size: xx-large;
   font-weight: 800;
@@ -99,6 +100,9 @@ page{
   background-color: #fff;
   padding: 100rpx 80rpx;
   display: flex;
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .btn-red{

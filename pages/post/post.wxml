@@ -1,6 +1,6 @@
 
 <view class="main-container">
-  <view class="title">create</view>
+  <view class="title">Create</view>
   <view class="red-highlight">your pin</view>
 </view>
   <!-- start if user is logged in -->
@@ -11,9 +11,9 @@
      
       <!-- start of upload_content -->
       <view class="upload_content">
+        <view style="color: #4d4d4d;">Create pin</view>
          <!-- start of select image -->
         <view wx:if="{{!images.length > 0}}">
-          <view>let's upload some images!</view>
           <image class="post-image" src="/images/add_image.png" mode="widthFix" bindtap="selectImage" style="margin-top: 30rpx; border-radius:10rpx"></image>
        </view>
 
