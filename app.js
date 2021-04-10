@@ -18,7 +18,8 @@ App({
     )
   },
   globalData: {
-    userInfo: wx.getStorageSync('userInfo')
+    userInfo: wx.getStorageSync('userInfo'),
+    swiperList: wx.getStorageSync('swiperList')
   },
   "permission": {
     "scope.userLocation": {

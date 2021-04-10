@@ -79,7 +79,7 @@
         {
           "name": "pages/show/show",
           "pathName": "pages/show/show",
-          "query": "",
+          "query": "id=606c535061fa327015683b65",
           "scene": null
         },
         {
@@ -91,6 +91,7 @@
         {
           "name": "pages/user/user",
           "pathName": "pages/user/user",
+          "query": "",
           "scene": null
         }
       ]

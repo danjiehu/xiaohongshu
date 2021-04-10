@@ -8,7 +8,14 @@ Page({
     currentUser: null,
     post: [],
     comments: [],
-    likes: []
+    likes: [],
+    swiperList: [],
+    activeSwiper: 0
+    // indicatorDots: true,
+    // vertical: false,
+    // autoplay: false,
+    // interval: 2000,
+    // duration: 500
   },
 
   addComment(event) {
@@ -47,11 +54,25 @@ Page({
         self.setData ({
           post: res.data
         })
+        console.log(res.data)
+        let gallery = res.data.gallery
+        console.log('gallery', gallery)
+       for (let i = 0; i < gallery.length; i +=1) {
+        let imagePath = gallery[i].path
+        let swiperList = self.data.swiperList
+        swiperList.push(imagePath)
+        console.log(self.data.swiperList)
+        self.setData ({
+          swiperList: this.data.swiperList
+        })
+        wx.setStorageSync('key', self.data.swiperList)
+      }
       },
       (err) => {
         console.log('error', err)
       }
     )
+  
 
     let Comments = new wx.BaaS.TableObject('comments_log_xhs')
     let query = new wx.BaaS.Query();
@@ -67,6 +88,12 @@ Page({
       }
     )
   },
+
+  swiperChange(e){
+    console.log("changed", e.detail.current)
+    this.setData({
+      activeSwiper: e.detail.current
+
   userInfoHandler: function(userInfo) {
     let self = this
     wx.BaaS.auth.loginWithWechat(userInfo).then(
@@ -77,6 +104,9 @@ Page({
       },
       err => {
         console.log('something went wrong!', err)
+
     })
   }
+  
+  
 })
